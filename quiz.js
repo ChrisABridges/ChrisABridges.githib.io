@@ -157,21 +157,25 @@ function buildQuiz() {
 
 userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')[]{}).value;
 
-               }             
+                            
 
-//if answer is correct add to the number of correct answers if(userAnswer===quizQuestions[i].correctAnswer){
+//if answer is correct add to the number of correct answers 
+  if(userAnswer===quizQuestions[i].correctAnswer){
 
                numCorrect++;
 
                //and colour the answers green
 
-               answerContainers[i].style.color = 'lightgreen'; } //if answer is wrong or blank else{
+               answerContainers[i].style.color = 'lightgreen'; } 
+
+//if answer is wrong or blank 
+else{
 
                //colour the answers red
 
                answerContainers[i].style.color = 'red'; 
               }
-
+}
               
 
                //show numbers of correct answers out of total
